@@ -228,6 +228,8 @@ GameObject:
   - component: {fileID: 1107585817}
   - component: {fileID: 1107585821}
   - component: {fileID: 1107585820}
+  - component: {fileID: 1107585822}
+  - component: {fileID: 1107585823}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -385,6 +387,40 @@ CapsuleCollider2D:
   m_Offset: {x: -0.03610581, y: 0}
   m_Size: {x: 0.83150613, y: 1}
   m_Direction: 0
+--- !u!114 &1107585822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107585816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 181f8151157ce8448bcf2c4d838f7b35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpSound: {fileID: 0}
+  wireSound: {fileID: 0}
+  wire: {fileID: 0}
+  jumpPower: 25
+--- !u!114 &1107585823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107585816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af699a7d2710b6c459cc538caadf9fd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  wire: {fileID: 0}
+  jumpableGround:
+    serializedVersion: 2
+    m_Bits: 0
+  startSound: {fileID: 0}
 --- !u!1 &1650021169
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,8 +432,9 @@ GameObject:
   - component: {fileID: 1650021172}
   - component: {fileID: 1650021171}
   - component: {fileID: 1650021170}
+  - component: {fileID: 1650021173}
   m_Layer: 0
-  m_Name: Ground
+  m_Name: Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -515,6 +552,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1650021173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650021169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b69d3e32c0f3c6b4da4456a67cbacd69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 20
+  currentGoldCoins: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
